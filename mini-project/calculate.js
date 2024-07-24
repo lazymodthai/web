@@ -24,6 +24,7 @@ const reset = () => {
 }
 
 const operate = (operator) => {
+  if(numOnDisplay.endsWith('.')) return
   const display = document.getElementById("display");
   switch (operator) {
     case "clear":
