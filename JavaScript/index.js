@@ -12,7 +12,7 @@ async function appendImageElem(keyword, index) {
       galleryElem.appendChild(imgElem);
     }
   } else {
-    console.error('เกิดข้อผิดพลาด:', response.statusText);
+    console.error('Error:', response.statusText);
   }
 }
 

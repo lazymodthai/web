@@ -12,10 +12,12 @@ body {
 
 h1 {
   font-family: Pattaya;
-  font-size: 4em;
+  font-size: 4vw;
   background: -webkit-linear-gradient(#ee15b5, #ec2f4b);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black; */
 }
 
 .gallery {

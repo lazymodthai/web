@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  font-family: Pattaya;
+  font-size: 52px;
+  background: -webkit-linear-gradient(#ee15b5, #ec2f4b);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
