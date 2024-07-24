@@ -50,6 +50,17 @@ const operate = (operator) => {
   display.innerHTML = amount;
 }
 
+const copy = () => {
+  if(amount == 0) return
+  const display = document.getElementById("display");
+  const textToCopy = display.innerHTML;
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    alert('คัดลอกผลลัพธ์แล้ว');
+  }).catch(err => {
+    console.log(err);
+  });
+}
+
 
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
