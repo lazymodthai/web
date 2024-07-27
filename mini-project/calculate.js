@@ -1,26 +1,26 @@
-let numOnDisplay = "";
+let numOnDisplay = "0";
 let operation = "";
 let firstNumber = "";
 let secondNumber = "";
-let amount = "";
+let amount = "0";
 
 const enterNumber = (inputNumber) => {
-  if(numOnDisplay.includes('.') && inputNumber === '.') return
+  if(numOnDisplay.includes('.') && inputNumber === '.') return;
   const display = document.getElementById("display");
-  amount == 0 ? numOnDisplay+=inputNumber : numOnDisplay = inputNumber
-  amount = ""
+  amount == 0 ? numOnDisplay+=inputNumber : numOnDisplay = inputNumber;
+  amount = "";
   if(numOnDisplay == '00') numOnDisplay = '0'
-  if(numOnDisplay.length > 1 && numOnDisplay.startsWith('0') && !numOnDisplay.startsWith('0.')) numOnDisplay = numOnDisplay.slice(1,2)
-  if(numOnDisplay.startsWith('.')) numOnDisplay = '0.'
+  if(numOnDisplay.length > 1 && numOnDisplay.startsWith('0') && !numOnDisplay.startsWith('0.')) numOnDisplay = numOnDisplay.slice(1,2);
+  if(numOnDisplay.startsWith('.')) numOnDisplay = '0.';
   display.innerHTML = numOnDisplay;
 }
 
 const reset = () => {
-  numOnDisplay = "";
+  numOnDisplay = "0";
   firstNumber = 0;
   secondNumber = 0;
   operation = "";
-  amount = "";
+  amount = "0";
 }
 
 const operate = (operator) => {
@@ -42,8 +42,8 @@ const operate = (operator) => {
       }
       break;
     default:
-      firstNumber = Number(display.innerHTML)
-      numOnDisplay = ""
+      firstNumber = Number(display.innerHTML);
+      numOnDisplay = "";
       operation = operator;
       return;
   }
@@ -51,7 +51,7 @@ const operate = (operator) => {
 }
 
 const copy = () => {
-  if(amount == 0) return
+  if(amount == 0) return;
   const display = document.getElementById("display");
   const textToCopy = display.innerHTML;
   navigator.clipboard.writeText(textToCopy).then(() => {
