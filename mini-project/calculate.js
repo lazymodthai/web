@@ -4,6 +4,14 @@ let firstNumber = "";
 let secondNumber = "";
 let amount = "0";
 
+const reset = () => {
+  numOnDisplay = "0";
+  firstNumber = 0;
+  secondNumber = 0;
+  operation = "";
+  amount = "0";
+}
+
 const enterNumber = (inputNumber) => {
   if(numOnDisplay.includes('.') && inputNumber === '.') return;
   const display = document.getElementById("display");
@@ -13,14 +21,6 @@ const enterNumber = (inputNumber) => {
   if(numOnDisplay.length > 1 && numOnDisplay.startsWith('0') && !numOnDisplay.startsWith('0.')) numOnDisplay = numOnDisplay.slice(1,2);
   if(numOnDisplay.startsWith('.')) numOnDisplay = '0.';
   display.innerHTML = numOnDisplay;
-}
-
-const reset = () => {
-  numOnDisplay = "0";
-  firstNumber = 0;
-  secondNumber = 0;
-  operation = "";
-  amount = "0";
 }
 
 const operate = (operator) => {
@@ -60,7 +60,6 @@ const copy = () => {
     console.log(err);
   });
 }
-
 
 document.addEventListener('keydown', (event) => {
   const keyName = event.key;
