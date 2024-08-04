@@ -65,6 +65,8 @@ document.addEventListener('keydown', (event) => {
   const keyName = event.key;
   if (keyName >= '0' && keyName <= '9') {
     enterNumber(String(keyName));
+  } else if (keyName === '.') {
+    enterNumber(".");
   } else if (keyName === 'Enter') {
     operate("amount");
   } else if (keyName === 'Escape') {
