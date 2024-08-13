@@ -28,7 +28,7 @@ const spec = [
   { type: 2, district: 'บ่อเกลือ', size: 848.341, population: 15316},
   { type: 2, district: 'เชียงกลาง', size: 277.115, population: 27097},
   { type: 2, district: 'สองแคว', size: 544.364, population: 12466},
-  { type: 2, district: 'ทุ่งช้าง', size: 760811, population: 18935},
+  { type: 2, district: 'ทุ่งช้าง', size: 760.811, population: 18935},
   { type: 2, district: 'เฉลิมพระเกียรติ', size: 518.690, population: 9832},
 ]
 
@@ -45,7 +45,7 @@ const runCounter = (num) => {
   const counters = document.querySelectorAll(".counter");
 
   counters.forEach((counter) => {
-    const target = counter.id == 'size' ? spec[num || 0].size : spec[num || 0].population;
+    const target = counter.id == 'size' ? spec[num+1 || 0].size : spec[num+1 || 0].population;
     counter.innerText = target/2;
     
     const updateCounter = () => {
