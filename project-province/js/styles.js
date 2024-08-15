@@ -1,8 +1,9 @@
 window.onscroll = function() {appear()};
-
 const appear = () => {
-  var txtLogo = document.getElementById("txt-logo");
-  var navbar = document.getElementById("navbar");
+  const oneVhInPixels = window.innerHeight * 0.01;
+  const txtLogo = document.getElementById("txt-logo");
+  const navbar = document.getElementById("navbar");
+
   if (document.documentElement.scrollTop > 150) {
     txtLogo.className = "hidden"
     navbar.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
@@ -10,6 +11,9 @@ const appear = () => {
   } else {
     txtLogo.className = "visible"
     navbar.style.backgroundColor = ""
+  }
+
+  if (document.documentElement.scrollTop > oneVhInPixels) {
   }
 }
 
@@ -32,34 +36,39 @@ const spec = [
   { type: 2, district: 'เฉลิมพระเกียรติ', size: 518.690, population: 9832},
 ]
 
+
+
 const showDistrict = (param) => {
-  const t = document.getElementById("tb1")
-  const d = document.getElementById("tb2")
-  t.innerHTML = param+1 == 0 ? "จังหวัด" : "อำเภอ"
-  d.innerHTML = spec[param+1].district
-  runCounter(param)
-}
+  let svg = document.getElementsByClassName("svg-map");
+  for (let i = 0; i < svg.length; i++) {
+    if (i+1 === param) {
+      svg[i].classList.add("active-map");
+    } else {
+      svg[i].classList.remove("active-map");
+    }
+  }
+  const t = document.getElementById("tb1");
+  const d = document.getElementById("tb2");
+  t.innerHTML = param === -1 ? "จังหวัด" : "อำเภอ";
+  d.innerHTML = spec[param].district;
+  runCounter(param);
+};
 
 
 const runCounter = (num) => {
   const counters = document.querySelectorAll(".counter");
-
   counters.forEach((counter) => {
-    const target = counter.id == 'size' ? spec[num+1 || 0].size : spec[num+1 || 0].population;
+    const target = counter.id == 'size' ? spec[num || 0].size : spec[num || 0].population;
     counter.innerText = target/2;
-    
     const updateCounter = () => {
       const count = +counter.innerText;
-      const increment = target / 200;
-
       if (count < target) {
-        counter.innerText = `${Math.ceil(count + increment)}`;
+        counter.innerText = `${Math.ceil(count + target / 200)}`;
         setTimeout(updateCounter, 10);
       } else {
         counter.innerText = target.toLocaleString();
       }
     };
-
     updateCounter();
   });
 }

@@ -88,12 +88,15 @@ body {
   justify-content: center;
 }
 .section2 path{
-  fill: rgb(255, 255, 255);
-  transition: all ease 1s;
+  /* fill: rgb(255, 255, 255);
+  transition: all ease 1s; */
 }
 .section2 path:hover{
-  fill: rgb(38, 141, 210);
+  fill: rgb(255, 130, 130);
   transition: all ease 1s;
+}
+.active-map{
+  fill: rgb(210, 38, 38) !important;
 }
 .district-detail{
   display: block;
@@ -109,6 +112,10 @@ body {
 }
 .district-detail table tbody tr{
   height: 4em;
+}
+#tb2{
+  text-align: right;
+  padding-right: 1em;
 }
 .district-map{
   display: block;
@@ -167,6 +174,8 @@ body {
     padding-left: 0;
     width: 100%;
     font-size: 2em;
+    margin-top: -300px;
+    margin-bottom: -100px;
   }
 }
 @media only screen and (max-width: 600px) {
