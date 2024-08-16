@@ -292,7 +292,7 @@ body::-webkit-scrollbar {
   flex-direction: column;
   gap: 2;
   overflow-y: scroll;
-  height: 80vh;
+  height: 90vh;
 }
 .modal-body::-webkit-scrollbar {
   visibility: hidden;
