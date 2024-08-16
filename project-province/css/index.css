@@ -35,6 +35,7 @@ body {
   top: 0;
   padding-top: 1em;
   justify-content: end;
+  z-index: 1;
 }
 .navbar ul {
   display: flex;
@@ -141,10 +142,10 @@ body {
 
 /* ------------------------------------------------------------------------------------------------- */
 .section3 {
-  /* height: 2000px; */
-  height: 100vh;
+  /* height: 100vh; */
   background: rgb(255, 255, 255);
-  /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(255, 255, 255) 40%); */
+  /* background-image: url(../imgs/home/bg-pattern1.jpg);
+  background-repeat: repeat; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -163,19 +164,45 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  font-size: 4em;
+  font-size: 5em;
   font-family: bw;
+  padding-top: 2em;
+  /* text-shadow: 0 0 0 #ffffff, 0 4px 12px #009bca; */
+  background: -webkit-linear-gradient(#3cc4ff, #237300);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .tour-list {
+  width: 100%;
   display: flex;
-  gap: 0.5em;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
   padding: 1em;
-  overflow-x: scroll;
-  overflow-y: hidden;
 }
 .card{
   min-width: 250px;
-  height: 280px;
+  height: 370px;
+  cursor: pointer;
+  width: 18rem;
+}
+.card:hover {
+  transform: scale(1.02);
+  z-index: 1;
+  transition: all ease 0.3s;
+  box-shadow: -1px 3px 7px -3px rgba(0, 143, 191, 0.75);
+}
+.card-header {
+  font-weight: 700;
+  font-size: 1.1em;
+  width: 100%;
+  height: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  background-color: rgb(79, 147, 137);
+  /* background: linear-gradient(to right, #009adc, #002196); */
 }
 .card-img-top {
   height: 150px;
@@ -187,7 +214,7 @@ body {
   color: black;
   font-size: 0.9em;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -225,20 +252,46 @@ body {
     padding-left: 0;
     width: 100%;
     font-size: 2em;
-    margin-top: -300px;
+    /* margin-top: -200px; */
     margin-bottom: -100px;
+  }
+  .district-map svg{
+    height: 70%;
   }
   .carousel-container {
     border: 0;
-    height: 90vw;
+  }
+  .tour{
+    /* margin-top: -18rem; */
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 620px) {
   .txt-mogo {
     font-size: 1.4em;
   }
   .district-detail table{
     font-size: 1.5em;
     padding-right: 2em;
+  }
+  .district-map svg{
+    margin-top: 50px;
+    height: 80%;
+  }
+  .card {
+    width: 35rem;
+    height: 25rem;
+  }
+  .card-header{
+    /* height: 50px; */
+  }
+  .card-img-top {
+    height: 250px;
+  }
+  .card-body{
+    height: 100px;
+  }
+  .card-text{
+    height: 60px;
+    -webkit-line-clamp: 3;
   }
 }
