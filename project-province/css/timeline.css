@@ -28,7 +28,7 @@ ul.timeline-3 > li > a > span {
 }
 ul.timeline-3 > li > a > img {
   max-width: 40vw;
-  min-width: 28vh;
+  min-width: 200px;
 }
 ul.timeline-3 > li:before {
   content: " ";
