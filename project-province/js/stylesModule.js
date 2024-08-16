@@ -1,4 +1,4 @@
-import { items } from "./constants.js";
+import { itemsTour, itemsCarousel } from "./constants.js";
 window.onscroll = function() {appear()};
 const appear = () => {
   const oneVhInPixels = window.innerHeight * 0.01;
@@ -20,12 +20,13 @@ const appear = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   tour();
+  carousel();
 });
 
 const tour = () => {
   // https://travel.trueid.net/detail/aqP4e528vNd
   const t = document.getElementById("tour")
-  const show = items.map((i)=>
+  const show = itemsTour.map((i)=>
     `<div class="card">
       <div class="card-header">${i.title}</div>
       <img class="card-img-top" src=${i.img} alt=${i.title}>
@@ -35,6 +36,24 @@ const tour = () => {
     </div>`
   )
   t.innerHTML = show.join("")
+}
+
+const carousel = () => {
+  const c = document.getElementById("carouselTour")
+  const id = document.getElementById("carouselID")
+  const show = itemsCarousel.map((i, index)=>
+    `<div class="carousel-item ${index == 0 ? 'active' : ''}">
+      <img class="d-block w-100" src=${i.img} alt=${i.alt}>
+    </div>`
+  );
+  const showID = itemsCarousel.map(
+    (i, index) =>
+      `<li data-target="#carouselIndicators" data-slide-to="${index}" class=${
+        index == 0 ? "active" : ""
+      }></li>`
+  )
+  c.innerHTML = show.join("")
+  id.innerHTML = showID.join("")
 }
 
 
