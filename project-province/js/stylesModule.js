@@ -20,11 +20,31 @@ const appear = () => {
   }
 };
 
+window.onresize = ()=>nav()
+
+const nav = () => {
+  const nav = document.getElementById("navbar");
+  if(window.innerWidth < 900){
+    nav.className = "navbar hidden"
+  }else{
+    nav.className = "navbar"
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   tour();
   food();
   trip();
   carousel();
+  nav();
+});
+
+const tourCards = document.querySelectorAll(".navbar ul li");
+  tourCards.forEach(nav => {
+    const navb = document.getElementById("navbar");
+    nav.addEventListener("click", (e) => {
+      navb.className = window.innerWidth < 900 ? "navbar hidden" : "navbar"
+    });
 });
 
 const tour = () => {

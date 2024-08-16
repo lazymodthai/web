@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @font-face {
   font-family: bw;
   src: url(../assets/FC-Bluewhale.ttf);
@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: Fahkwang;
   overflow: scroll;
+  position: relative;
 }
 body::-webkit-scrollbar {
   visibility: hidden;
@@ -26,6 +27,7 @@ body::-webkit-scrollbar {
   padding-top: 1em;
   justify-content: end;
   z-index: 999;
+  visibility: visible;
 }
 .navbar ul {
   display: flex;
@@ -40,16 +42,27 @@ body::-webkit-scrollbar {
   border-bottom: 3px solid rgba(0, 255, 30, 0);
   transition: all ease-in 0.3s;
 }
-.navbar ul li a{
+.navbar ul li a {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
-.navbar ul li a span{
+.navbar ul li a span {
   font-size: 1.5em;
   color: rgba(255, 255, 255);
 }
 .navbar ul li:hover {
   border-bottom: 3px solid white;
+}
+
+.menu-toggle svg{
+  z-index: 1200;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  /* mix-blend-mode: difference; */
 }
 
 /* ------------------------------------------------------------------------------------------------- */
@@ -82,50 +95,54 @@ body::-webkit-scrollbar {
   /* height: 100vh; */
   padding-top: 14em;
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(50,44,43,1) 24%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(50, 44, 43, 1) 24%
+  );
   display: flex;
   justify-content: center;
 }
-.section2 path{
+.section2 path {
   /* fill: rgb(255, 255, 255);
   transition: all ease 1s; */
 }
-.section2 path:hover{
+.section2 path:hover {
   fill: rgb(255, 130, 130);
   transition: all ease 1s;
 }
-.active-map{
+.active-map {
   fill: rgb(210, 38, 38) !important;
 }
-.district-detail{
+.district-detail {
   display: block;
   /* background-color: whitesmoke; */
   color: #ffffff;
   padding-top: 30vh;
   padding-left: 10%;
 }
-.district-detail table{
+.district-detail table {
   width: 40vw;
   text-align: left;
   font-size: 2em;
 }
-.district-detail table tbody tr{
+.district-detail table tbody tr {
   height: 4em;
 }
-#tb2{
+#tb2 {
   text-align: right;
   padding-right: 1em;
 }
-.district-map{
+.district-map {
   display: block;
   padding: 0;
 }
-.district-map svg{
+.district-map svg {
   width: 100%;
   height: 100%;
   margin: 0;
 }
-.counter{
+.counter {
   color: rgb(255, 153, 130);
   text-align: right;
   padding-right: 1em;
@@ -133,21 +150,21 @@ body::-webkit-scrollbar {
 
 /* ------------------------------------------------------------------------------------------------- */
 .section3 {
-  background: rgb(255,255,255);
-  background: linear-gradient(0deg, #AF8260 0%, #322C2B 100%);
-  
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, #af8260 0%, #322c2b 100%);
+
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .carousel-container {
   margin: 1em auto;
-  border-image: linear-gradient(to bottom, #AF8260 0%, #AF8260 100%) 1;
+  border-image: linear-gradient(to bottom, #af8260 0%, #af8260 100%) 1;
   border-width: 12px;
   border-style: solid;
   padding: 5px;
 }
-.carousel-item{
+.carousel-item {
   padding: 0.5em;
 }
 .tour, .food {
@@ -158,13 +175,13 @@ body::-webkit-scrollbar {
   font-family: bw;
   padding-top: 2em;
   color: white;
-  text-shadow: 0 0 8px #000000, 5px 5px 0 #E4C59E;
+  text-shadow: 0 0 8px #000000, 5px 5px 0 #e4c59e;
   /* background: -webkit-linear-gradient(#3cc4ff, #237300);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
 .food {
-  text-shadow: 0 0 8px #000000, 5px 5px 0 #803D3B;
+  text-shadow: 0 0 8px #000000, 5px 5px 0 #803d3b;
 }
 
 .tour-list {
@@ -176,7 +193,7 @@ body::-webkit-scrollbar {
   padding: 1em;
   margin-bottom: 4rem;
 }
-.card{
+.card {
   min-width: 250px;
   height: 370px;
   cursor: pointer;
@@ -198,12 +215,12 @@ body::-webkit-scrollbar {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: #322C2B;
-  background-color: #E4C59E;
+  color: #322c2b;
+  background-color: #e4c59e;
   /* background: linear-gradient(to right, #009adc, #002196); */
 }
 .card-food .card-header {
-  background-color: #AF8260;
+  background-color: #af8260;
   color: #fff;
 }
 .card-img-top {
@@ -227,8 +244,10 @@ body::-webkit-scrollbar {
   position: relative;
   min-height: 100vh;
   background-image: 
-    /* -webkit-linear-gradient(#ffffff, #000000), */
-    -webkit-linear-gradient(#000, #fff),
+    /* -webkit-linear-gradient(#ffffff, #000000), */ -webkit-linear-gradient(
+      #000,
+      #fff
+    ),
     url(../imgs/home/bg-pattern1.jpg); /* Gradient on top of the background image */
   background-repeat: repeat;
   background-blend-mode: screen; /* Blend mode applied to the gradient and image */
@@ -251,8 +270,8 @@ body::-webkit-scrollbar {
 /* ------------------------------------------------------------------------------------------------- */
 .section6 {
   height: 80px;
-  background-color: #322C2B;
-  color: #E4C59E;
+  background-color: #322c2b;
+  color: #e4c59e;
   text-align: center;
   padding-top: 30px;
 }
@@ -261,14 +280,14 @@ body::-webkit-scrollbar {
 .modal-content {
   width: 100%;
 }
-.modal-header{
-  background-color: #E4C59E;
+.modal-header {
+  background-color: #e4c59e;
 }
-.modal-title{
-  color: #322C2B;
+.modal-title {
+  color: #322c2b;
 }
-.modal-body{
-  color: #322C2B;
+.modal-body {
+  color: #322c2b;
   display: flex;
   flex-direction: column;
   gap: 2;
@@ -278,10 +297,10 @@ body::-webkit-scrollbar {
 .modal-body::-webkit-scrollbar {
   visibility: hidden;
 }
-.modal-body > p{
+.modal-body > p {
   text-indent: 3em;
 }
-.modal-body > img{
+.modal-body > img {
   max-width: 35vw;
   margin: auto;
   margin-bottom: 1em;
@@ -300,44 +319,59 @@ body::-webkit-scrollbar {
 }
 
 @media only screen and (max-width: 1440px) {
-  .district-detail table{
+  .district-detail table {
     font-size: 2.2vw;
   }
 }
 
 @media only screen and (max-width: 900px) {
+  .menu-toggle svg{
+    display: block;
+  }
+  .navbar {
+    justify-content: start;
+  }
+  .navbar ul {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .navbar ul li{
+    display: block;
+  }
   .section2 {
     flex-direction: column;
   }
-  .district-detail table{
+  .district-detail table {
     padding-left: 0;
     width: 100%;
     font-size: 2em;
     /* margin-top: -200px; */
     margin-bottom: -100px;
   }
-  .district-map svg{
+  .district-map svg {
     height: 70%;
   }
   .carousel-container {
     border: 0;
   }
-  .tour{
+  .tour {
     /* margin-top: -18rem; */
   }
 }
 @media only screen and (max-width: 620px) {
-  body {overflow-x: hidden;}
+  body {
+    overflow-x: hidden;
+  }
   .txt-mogo {
     font-size: 1.4em;
     width: 80%;
   }
-  .district-detail table{
+  .district-detail table {
     width: 300px;
     font-size: 1.2em;
     padding-right: 2em;
   }
-  .district-map svg{
+  .district-map svg {
     margin-top: 50px;
     height: 80%;
   }
@@ -345,20 +379,20 @@ body::-webkit-scrollbar {
     width: 100%;
     height: 25rem;
   }
-  .card-header{
+  .card-header {
     /* height: 50px; */
   }
   .card-img-top {
     height: 250px;
   }
-  .card-body{
+  .card-body {
     height: 100px;
   }
-  .card-text{
+  .card-text {
     height: 60px;
     -webkit-line-clamp: 3;
   }
-  .modal-body > img{
+  .modal-body > img {
     max-width: 70vw;
   }
 }

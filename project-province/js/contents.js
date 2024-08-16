@@ -51,6 +51,11 @@ const runCounter = (num) => {
   });
 }
 
+const toggleNavbar = () => {
+  const nav = document.getElementById("navbar");
+  nav.classList.toggle("hidden");
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   runCounter();
 });
