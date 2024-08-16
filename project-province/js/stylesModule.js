@@ -26,11 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
 const tour = () => {
   const t = document.getElementById("tour")
   const show = itemsTour.map((i, index)=>
-    `<div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay=${(index+1)*100}>
-      <div class="card-header">${i.title}</div>
-      <img class="card-img-top" src=${i.img} alt=${i.title}>
-      <div class="card-body">
-        <p class="card-text">${i.info}</p>
+    `<div class="card-container">
+        <div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay=${(index+1)*100}>
+        <div class="card-header">${i.title}</div>
+        <img class="card-img-top" src=${i.img} alt=${i.title}>
+        <div class="card-body">
+          <p class="card-text">${i.info}</p>
+        </div>
       </div>
     </div>`
   )

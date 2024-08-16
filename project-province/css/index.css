@@ -74,7 +74,8 @@ body {
 /* ------------------------------------------------------------------------------------------------- */
 .section2 {
   /* height: 2000px; */
-  height: 100vh;
+  /* height: 100vh; */
+  padding-top: 14em;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(50,44,43,1) 24%);
   display: flex;
@@ -127,11 +128,6 @@ body {
 
 /* ------------------------------------------------------------------------------------------------- */
 .section3 {
-  /* height: 100vh; */
-  /* background: rgb(255, 255, 255); */
-  /* background-image: url(../imgs/home/bg-pattern1.jpg);
-  background-repeat: repeat; */
-  /* background: -webkit-linear-gradient(#000000, #ffffff); */
   background: rgb(255,255,255);
   background: linear-gradient(0deg, #AF8260 0%, #322C2B 100%);
   
@@ -180,12 +176,13 @@ body {
   height: 370px;
   cursor: pointer;
   width: 18rem;
+  overflow: visible;
 }
-.card:hover {
+.card-container:hover {
   transform: scale(1.03) !important;
   z-index: 1;
-  transition: all ease 0.2s;
-  box-shadow: -1px 3px 7px -3px rgba(0, 143, 191, 0.75);
+  transition: all ease 0.3s;
+  box-shadow: -1px 3px 7px -3px rgba(0, 0, 0, 0.75);
 }
 .card-header {
   font-weight: 700;
