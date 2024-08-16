@@ -24,10 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const tour = () => {
-  // https://travel.trueid.net/detail/aqP4e528vNd
   const t = document.getElementById("tour")
-  const show = itemsTour.map((i)=>
-    `<div class="card">
+  const show = itemsTour.map((i, index)=>
+    `<div class="card" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay=${(index+1)*100}>
       <div class="card-header">${i.title}</div>
       <img class="card-img-top" src=${i.img} alt=${i.title}>
       <div class="card-body">

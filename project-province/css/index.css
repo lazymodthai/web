@@ -149,7 +149,7 @@ body {
 .carousel-item{
   padding: 0.5em;
 }
-.tour {
+.tour, .food {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -162,6 +162,10 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+.food {
+  text-shadow: 0 0 8px #000000, 5px 5px 0 #803D3B;
+}
+
 .tour-list {
   width: 100%;
   display: flex;
@@ -178,9 +182,9 @@ body {
   width: 18rem;
 }
 .card:hover {
-  transform: scale(1.02);
+  transform: scale(1.03) !important;
   z-index: 1;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
   box-shadow: -1px 3px 7px -3px rgba(0, 143, 191, 0.75);
 }
 .card-header {
