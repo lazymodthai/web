@@ -7,7 +7,7 @@ const appear = () => {
 
   if (document.documentElement.scrollTop > 150) {
     txtLogo.className = "hidden"
-    navbar.style.backgroundColor = "rgba(0, 0, 0, 0.2)"
+    navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
     navbar.style.transition = "all ease 0.3s"
   } else {
     txtLogo.className = "visible"

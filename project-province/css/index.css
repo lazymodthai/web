@@ -13,29 +13,14 @@ body {
   font-family: Fahkwang;
 }
 
-/* #container {
-  aspect-ratio: 2/1;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  scroll-snap-type: y mandatory;
-  height: 100vh;
-  width: 100%;
-}
-
-#container > div{
-  scroll-snap-align: center;
-  scroll-snap-stop: always;
-  aspect-ratio: 2/1;
-} */
 /* ------------------------------------------------------------------------------------------------- */
 .navbar {
   width: 100%;
-  /* background-color: rgba(0, 0, 0, 0.2); */
   position: fixed;
   top: 0;
   padding-top: 1em;
   justify-content: end;
-  z-index: 1;
+  z-index: 999;
 }
 .navbar ul {
   display: flex;
@@ -91,7 +76,7 @@ body {
   /* height: 2000px; */
   height: 100vh;
   background: rgb(0, 0, 0);
-  /* background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(60,164,215,1) 40%); */
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(50,44,43,1) 24%);
   display: flex;
   justify-content: center;
 }
@@ -143,16 +128,20 @@ body {
 /* ------------------------------------------------------------------------------------------------- */
 .section3 {
   /* height: 100vh; */
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
   /* background-image: url(../imgs/home/bg-pattern1.jpg);
   background-repeat: repeat; */
+  /* background: -webkit-linear-gradient(#000000, #ffffff); */
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, #AF8260 0%, #322C2B 100%);
+  
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .carousel-container {
   margin: 1em auto;
-  border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1;
+  border-image: linear-gradient(to bottom, #AF8260 0%, #AF8260 100%) 1;
   border-width: 12px;
   border-style: solid;
   padding: 5px;
@@ -167,10 +156,11 @@ body {
   font-size: 5em;
   font-family: bw;
   padding-top: 2em;
-  /* text-shadow: 0 0 0 #ffffff, 0 4px 12px #009bca; */
-  background: -webkit-linear-gradient(#3cc4ff, #237300);
+  color: white;
+  text-shadow: 0 0 8px #000000, 5px 5px 0 #E4C59E;
+  /* background: -webkit-linear-gradient(#3cc4ff, #237300);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 .tour-list {
   width: 100%;
@@ -179,6 +169,7 @@ body {
   justify-content: center;
   gap: 1em;
   padding: 1em;
+  margin-bottom: 4rem;
 }
 .card{
   min-width: 250px;
@@ -200,8 +191,8 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: white;
-  background-color: rgb(79, 147, 137);
+  color: #322C2B;
+  background-color: #E4C59E;
   /* background: linear-gradient(to right, #009adc, #002196); */
 }
 .card-img-top {
@@ -219,7 +210,21 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 /* ------------------------------------------------------------------------------------------------- */
+.section4 {
+  position: relative;
+  height: 100vh;
+  background-image: 
+    /* -webkit-linear-gradient(#ffffff, #000000), */
+    -webkit-linear-gradient(#000, #fff),
+    url(../imgs/home/bg-pattern1.jpg); /* Gradient on top of the background image */
+  background-repeat: repeat;
+  background-blend-mode: screen; /* Blend mode applied to the gradient and image */
+  z-index: 1;
+}
+
+
 /* ------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------- */
