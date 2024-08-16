@@ -1,0 +1,44 @@
+ul.timeline-3 {
+  list-style-type: none;
+  position: relative;
+  width: 60vw;
+}
+ul.timeline-3:before {
+  content: " ";
+  background: #AF8260;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 4px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline-3 > li {
+  margin: 20px 0;
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+ul.timeline-3 > li > a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #322C2B;
+}
+ul.timeline-3 > li > a > span {
+  color: #982B1C;
+}
+ul.timeline-3 > li > a > img {
+  max-width: 40vw;
+  min-width: 28vh;
+}
+ul.timeline-3 > li:before {
+  content: " ";
+  background: url(../imgs/checkin.svg) no-repeat center center;
+  background-color: white;
+  background-size: contain;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  width: 40px;  /* Adjust the width to match your icon's size */
+  height: 40px; /* Adjust the height to match your icon's size */
+  z-index: 400;
+}

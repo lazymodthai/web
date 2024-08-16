@@ -176,7 +176,8 @@ body {
   height: 370px;
   cursor: pointer;
   width: 18rem;
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 12px;
 }
 .card-container:hover {
   transform: scale(1.03) !important;
@@ -195,6 +196,10 @@ body {
   color: #322C2B;
   background-color: #E4C59E;
   /* background: linear-gradient(to right, #009adc, #002196); */
+}
+.card-food .card-header {
+  background-color: #AF8260;
+  color: #fff;
 }
 .card-img-top {
   height: 150px;
@@ -215,7 +220,7 @@ body {
 /* ------------------------------------------------------------------------------------------------- */
 .section4 {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   background-image: 
     /* -webkit-linear-gradient(#ffffff, #000000), */
     -webkit-linear-gradient(#000, #fff),
@@ -224,10 +229,28 @@ body {
   background-blend-mode: screen; /* Blend mode applied to the gradient and image */
   z-index: 1;
 }
-
+.food-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  margin-bottom: 4rem;
+}
 
 /* ------------------------------------------------------------------------------------------------- */
+.section5 {
+  min-height: 100vh;
+}
 /* ------------------------------------------------------------------------------------------------- */
+.section6 {
+  height: 80px;
+  background-color: #322C2B;
+  color: #E4C59E;
+  text-align: center;
+  padding-top: 30px;
+}
 /* ------------------------------------------------------------------------------------------------- */
 
 

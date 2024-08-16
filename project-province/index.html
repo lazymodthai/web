@@ -11,6 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/timeline.css" />
   <script src="js/contents.js"></script>
   <script type="module" src="js/stylesModule.js"></script>
 </head>
@@ -24,17 +25,17 @@
       <li><a href="#section1"><span>ห</span>น้าแรก</a></li>
       <li><a href="#section3"><span>ส</span>ถานที่ท่องเที่ยว</a></li>
       <li><a href="#section4"><span>อ</span>าหารอร่อย</a></li>
-      <li><a href=""><span>ก</span>ารเดินทาง</a></li>
+      <li><a href="#section5"><span>ท</span>ริปแนะนำ</a></li>
     </ul>
   </div>
   <div id="container">
-    <div id="section1" class="section1">
+    <section id="section1" class="section1">
       <div id="txt-logo">
         <div class="txt-logo"><span>น่</span><span>า</span><span>น</span></div>
         <div class="txt-mogo">แข่งเรือลือเลี่อง<br>เมืองงาช้างดำ<br>จิตรกรรมวัดภูมินทร์<br>แดนดินส้มสีทอง<br>เรืองรองพระธาตุแช่แห้ง</div>
       </div>
-    </div>
-    <div id="section2" class="section2">
+    </section>
+    <section id="section2" class="section2">
       <div class="district-detail">
         <table>
           <tbody>
@@ -69,8 +70,8 @@
         <path data-aos-delay="200" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="100" class="svg-map" onclick="showDistrict(15)" d="M575.5 196.5L571 201L573 204L571.5 210L565 216.5L567 219L564.5 222L570.5 227.5L576 227L582.5 230L584.5 233L585 236L591.5 242.5V250L585.5 256L584.5 259.5L586.5 262.5L582.5 269L587.5 274L586.5 281L589 284.5L591.5 293L591 298L594.5 302.5L598.5 301.5L604 304.5H606.5L611.5 302L616.5 302.5L618.5 300.5L623.5 300L627.5 298L630.5 297L632.5 300.5L631 304V308.5L626.5 317L629 320.5V328.5L631 332V336L638 341.5L644.5 336L649.5 337.5L651 335H659L664 331.5L664.5 337.5L677.5 339L684 333.5L678 324L677 313L680 312L689.5 297L688.5 290.5L685.5 283L687.5 279.5V275L690.5 273.5L693.5 275L699.5 273L702.5 276L707.5 273.5L713.5 276L715 272L717 269L715 265.5L717 256L723.5 248V244.5L717.5 235L724.5 226L722 222.5L721 219L712 213L708.5 214.5L704 212L702.5 207L698 208.5L694 207L691 209.5L685 207L684 212L682 213L684 217.5L678.5 222.5L675 220L670.5 221L667 217L663.5 220H657.5H652L650 222.5H647.5L646 225L642 224.5L641 220L639 217L632 219L629 217L628 213L622.5 208L616.5 208.5V206L611.5 199.5L608 201L606 198.5L603 199.5L600.5 195.5H596.5L593 199.5H586L582.5 197L579 198.5L575.5 196.5Z" fill="white" stroke="black"/>
         </svg>
       </div>
-    </div>
-    <div id="section3" class="section3">
+    </section>
+    <section id="section3" class="section3">
         <div class="tour">ไปไหนดี?</div>
         <div class="carousel-container" data-aos="zoom-in">
           <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
@@ -87,11 +88,25 @@
           </div>
         </div>
         <div id="tour" class="tour-list"></div>
-    </div>
-    <div id="section4" class="section4">
-      <div class="food">ของอร่อย!</div>
-    </div>
-    <div id="section5" class="section5">Section 5</div>
+    </section>
+    <section id="section4" class="section4">
+      <div class="food">ร้านอร่อย!</div>
+      <div id="food" class="food-list"></div>
+    </section>
+    <section id="section5" class="section5">
+      <div class="food">ทริปสุดปัง!</div>
+      <div class="container my-5">
+        <div class="row">
+          <div class="">
+            <h4 style="margin-left: 1.2rem; font-size: 2rem;">3 วัน 2 คืน สะปัน-ดอยสกาด-ปัว ด้วยรถยนต์ส่วนตัวแบบ Slow Life</h4>
+            <ul class="timeline-3" id="trip"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section6">
+      Copyright 2024 © Anucha Kaewnil - 661112010014
+    </section>
     </div>
 </body>
 </html>
