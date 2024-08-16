@@ -55,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 .menu-toggle svg{
-  z-index: 1200;
+  z-index: 1000;
   position: fixed;
   top: 20px;
   right: 20px;
