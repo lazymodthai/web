@@ -110,7 +110,7 @@ const trip = () => {
   const t = document.getElementById("trip");
   const show = itemsTrip.map((i, index) =>
     i.place !== '' ?
-    `<li data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-delay="100">
+    `<li data-aos="fade-up">
       <a href=${i.url}><span>${i.day}:</span> ${i.title}<br><img src="${i.img}" alt=""></a>
       <p class="mt-2">${i.info}</p>
     </li>` : ''

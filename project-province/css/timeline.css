@@ -3,6 +3,10 @@ ul.timeline-3 {
   position: relative;
   width: 60vw;
 }
+ul.timeline-3 > li > p{
+  max-width: 40vw;
+  min-width: 325px;
+}
 ul.timeline-3:before {
   content: " ";
   background: #AF8260;
